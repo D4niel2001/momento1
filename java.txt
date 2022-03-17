@@ -1,0 +1,60 @@
+
+    public static void main(String[] args) {
+        Scanner sn = new Scanner(System.in);
+        int numpersonas,propina;
+        System.out.println("Numero de personas de la mesa");
+        double total = 0;
+        numpersonas = sn.nextInt();
+        int platohamburguesa =0,platoperro =0,platosalchipapas =0,platochorizo =0;
+
+        for
+            (int i = 1; i <= numpersonas;i++){
+            System.out.println("tu que opcion desea elegir de la carta:");
+            System.out.println("1.hamburguesa $10000");
+            System.out.println("2.Perros $8000");
+            System.out.println("3.Salchipapas $6000");
+            System.out.println("4.chorizo $7000");
+
+            System.out.println("Escribe una de las opciones");
+
+            int plato= sn.nextInt();
+               if (plato == 1){
+                   total = total + 100000;
+                   platohamburguesa = platohamburguesa + 1;
+            }
+               else if (plato == 2){
+                   total = total + 8000;
+                   platoperro = platoperro + 1;
+                    }
+               else if (plato == 3){
+                   total = total + 8000;
+                   platosalchipapas = platosalchipapas + 1;
+                    }
+               else if (plato == 4){
+                   total = total + 8000;
+                   platochorizo = platochorizo + 1;
+                    }
+            }
+        if (platochorizo >= 2){
+            total=total - total*0.5;
+        }
+        else if (platohamburguesa >= 2){
+            total=total - total*0.5;
+        }
+        else if (platoperro >= 2){
+            total=total - total*0.5;
+        }
+        else if (platosalchipapas >= 2){
+            total=total - total*0.5;
+        }
+if (total > 20000){
+    total = total - total*0.10;
+}
+
+        System.out.println("total a pagar "+total);
+        propina= sn.nextInt();
+
+
+
+    }
+}
